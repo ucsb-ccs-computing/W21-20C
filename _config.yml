@@ -1,0 +1,93 @@
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+remote_theme: ucsb-cs-course-repos/course-repo-jekyll-theme
+
+url: https://ucsb-ccs-computing.github.io
+baseurl: "/W21-20C"
+
+course: "CMPTGCS 20C"
+qtr: "W21"
+instructor: "Richert Wang"
+quarter: "Winter 2021"
+piazza_url: 
+gauchospace_course_page:
+gradescope_class_url:
+
+github_url: https://github.com/ucsb-ccs-computing/W21-20C
+
+start_week: 1
+start_date: 2021-01-03 00:00:00.00-7:00
+num_weeks: 10
+extra_exam_week: true
+
+cal_dates: >                                                                    
+  [                                                                            
+    {"label":"W21 1st day of instruction", "date":"2021-01-04" },
+    {"label":"MLK Jr. Holiday", "date":"2021-01-18" },
+    {"label":"President's Day Holiday", "date":"2021-02-15" },
+    {"label":"W21 instruction ends", "date":"2021-03-12" },                    
+    {"label":"W21 finals start", "date":"2021-03-13" },                        
+    {"label":"W21 finals end", "date":"2021-03-19" },                          
+    {"label":"W21 qtr ends", "date":"2021-03-19" }                              
+  ]
+
+kramdown:
+   parse_block_html: true
+   default_lang: cpp
+
+exclude:
+   - vendor
+   - _hwk/keep
+   - _lab/keep
+   - _exam/keep
+   - _lectures/keep
+   - _info/keep        
+include:
+   - _pages
+   
+timezone: America/Los_Angeles
+
+collections:
+  hwk:
+    output: true
+    permalink: /hwk/:path/
+    last_before: false
+  lectures:
+    output: true
+    permalink: /lectures/:path/
+  info:
+    output: true
+    permalink: /info/:path/
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: default
+  - 
+    scope:
+      path: ""
+      type: lectures
+    values:
+      layout: lecture
+  - 
+    scope:
+      path: ""
+      type: hwk
+    values:
+      layout: hwk
+  -
+    scope:
+      path: ""
+      type: info
+    values:
+      layout: default
+  -
+    scope:
+      path: "syllabus.md"
+      type: info
+    values:
+      layout: handout
