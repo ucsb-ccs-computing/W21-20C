@@ -10,7 +10,7 @@ ready: false
 * **Lecture**: Tu/Th 11am-12:15pm
                        
 * Office Hours:
-   * Tuesdays 11am - 12:15pm, Thursdays 10am - 11am
+   * Tuesdays 11am - 12:15pm, Thursdays 10am - 11am, or by appointment
 
 For course website links, visit <https://ucsb-ccs-computing.github.io/W21-20C>.
 
